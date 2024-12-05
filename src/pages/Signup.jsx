@@ -30,11 +30,11 @@ const SignupForm = () => {
       return;
     }
     try {
-     const res = await axios.post("https://notes-backend.vercel.app/api/auth/register", {
-      username: formData.username,
-      email: formData.email,
-      password: formData.password,
-      });
+    const res = await axios.post("https://notes-backend.vercel.app/api/auth/register", {
+  username: formData.username,
+  email: formData.email,
+  password: formData.password,
+});
       console.log(res);
       alert("Account created successfully!");
       if(res.data.success){
