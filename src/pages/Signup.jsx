@@ -30,7 +30,7 @@ const SignupForm = () => {
       return;
     }
     try {
-      const res = await axios.post("http://localhost:5050/api/auth/register", {
+      const res = await axios.post("notes-backend.vercel.app/api/auth/register", {
         username: formData.username,
         email: formData.email,
         password: formData.password,
