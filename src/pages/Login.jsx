@@ -26,7 +26,7 @@ const navigate=useNavigate()
   const handleSubmit = async (e) => {
     e.preventDefault();
     try{
-      const res = await axios.post("notes-backend.vercel.app/api/auth/login", {
+      const res = await axios.post("https://notesbackend-drfi.onrender.com/api/auth/login", {
      
         email: formData.email,
         password: formData.password,
