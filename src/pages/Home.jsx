@@ -19,7 +19,7 @@ function Home() {
   const addNote = async (title, description) => {
     try {
       const res = await axios.post(
-        "notes-backend.vercel.app/api/auth/add",
+        "https://notesbackend-drfi.onrender.com/api/auth/add",
         { title, description },
         {
           headers: {
@@ -47,7 +47,7 @@ function Home() {
 
   const fetchNotes = async () => {
     try {
-      const { data } = await axios.get("notes-backend.vercel.app/api/auth/note", {
+      const { data } = await axios.get("https://notesbackend-drfi.onrender.com/api/auth/note", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -60,7 +60,7 @@ function Home() {
   const editNote = async (id, title, description) => {
     try {
       const res = await axios.put(
-        `notes-backend.vercel.app/api/auth/edit/${id}`,
+        `https://notesbackend-drfi.onrender.com/api/auth/edit/${id}`,
         { title, description },
         {
           headers: {
@@ -98,7 +98,7 @@ function Home() {
   const deleteNode = async (id) => {
     try {
       const res = await axios.delete(
-        `notes-backend.vercel.app/api/auth/delete/${id}`,
+        `https://notesbackend-drfi.onrender.com/api/auth/delete/${id}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
