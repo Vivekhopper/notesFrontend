@@ -34,7 +34,7 @@ function ContextProvider({ children }) {
       }
 
       try {
-        const res = await axios.get("http://localhost:5050/api/auth/verify", {
+        const res = await axios.get("https://notesbackend-drfi.onrender.com/api/auth/verify", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
