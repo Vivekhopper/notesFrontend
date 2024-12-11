@@ -30,7 +30,7 @@ const SignupForm = () => {
       return;
     }
     try {
-    const res = await axios.post("https://notes-backend.vercel.app/api/auth/register", {
+    const res = await axios.post("https://notesbackend-drfi.onrender.com/api/auth/register", {
   username: formData.username,
   email: formData.email,
   password: formData.password,
